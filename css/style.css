@@ -3,6 +3,7 @@
 }
 
 body {
+	font-family: "Architects Daughter", cursive;
 }
 
 .main {
@@ -12,7 +13,7 @@ body {
 }
 
 input {
-	width: 20em;
+	width: 30em;
 	margin: auto;
 }
 
@@ -21,7 +22,7 @@ input {
 .item {
 	text-align: left;
 	background-color: rgba(255, 0, 0, .6);
-	border: solid 2px black;
+	border-radius: 15px;
 	width: 30em;
 	margin: 1em auto;
 	padding: .2em 1em;
@@ -44,8 +45,9 @@ button {
 	display: inline-block;
 	width: 68px;
 	margin-top: 12px;
+	border: none;
+	border-radius: 5px;
 }
-
 
 /* COMPLETED ITEM */
 .completed {
@@ -63,7 +65,12 @@ button {
 
 .visible {
 	display: block;
-	width: 100%;
+	resize: none;
+	width: 94%;
 	height: 4em;
+	border: none;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 1em auto;
 }
 
