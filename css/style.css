@@ -23,6 +23,7 @@ input {
 	margin: 1em auto;
 	padding: .2em 1em;
 	min-height: 3em;
+	transition: background-color 1s, min-height 1s;
 }
 
 .item-name {
@@ -65,7 +66,8 @@ button:hover {
 
 /* EXPANDED ITEM */
 .expanded {
-	min-height: 8em;
+	min-height: 12em;
+	transition: min-height 1s;
 }
 
 .visible {
