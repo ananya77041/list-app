@@ -9,7 +9,7 @@ $(document).ready(function() {
 	});
 
 	// Expanded the description
-	$(".item").click(function() {
+	$(".items").on('click', '.item', function() {
 		if ($(this).hasClass("expanded")) {
 			$(this).find("textarea").removeClass("visible");
 			$(this).removeClass("expanded");
@@ -19,12 +19,12 @@ $(document).ready(function() {
 			var current = $(this);
 			window.setTimeout(function() {
 				current.find("textarea").addClass("visible");
-			}, 1000);
+			}, 500);
 		};
-	})
+	});
 
 	// Marking item done
-	$("button").click(function(e) {
+	$(".items").on('click', 'button', function(e) {
 		e.stopPropagation();
 		$(this).parent().addClass("completed");
 		$(this).fadeOut(500, function() {
@@ -32,7 +32,8 @@ $(document).ready(function() {
 		});
 	});
 
-	$(".item-desc").click(function(e) {
+	// Prevent clicks on description from collapsing item
+	$(".items").on('click', '.item-desc', function(e) {
 		e.stopPropagation();
 	});
 });
