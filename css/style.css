@@ -1,0 +1,69 @@
+.div {
+	border: solid 1px yellow;
+}
+
+body {
+}
+
+.main {
+	width: 60%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+input {
+	width: 20em;
+	margin: auto;
+}
+
+
+/* NEWLY ADDED LIST ITEM */
+.item {
+	text-align: left;
+	background-color: rgba(255, 0, 0, .6);
+	border: solid 2px black;
+	width: 30em;
+	margin: 1em auto;
+	padding: .2em 1em;
+	min-height: 3em;
+}
+
+.item-name {
+	display:inline-block;
+	font-size: 1em;
+	max-width: 20em;
+	margin-bottom: 1em;
+}
+
+.item-desc {
+	display:none;
+}
+
+button {
+	float: right;
+	display: inline-block;
+	width: 68px;
+	margin-top: 12px;
+}
+
+
+/* COMPLETED ITEM */
+.completed {
+	background-color: rgba(0, 255, 0, .6);
+}
+
+.completed p {
+	text-decoration: line-through;
+}
+
+/* EXPANDED ITEM */
+.expanded {
+	min-height: 8em;
+}
+
+.visible {
+	display: block;
+	width: 100%;
+	height: 4em;
+}
+

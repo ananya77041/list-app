@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ListIt</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="js/list.js"></script>
+</head>
+<body>
+	<div class="main">
+		<h1>ListIt</h1>
+		<input type="text" name="new-item" placeholder="Input new item here and hit enter to add!">
+		<div class="items">
+			<div class="item">
+				<p class="item-name">Item #1</p>
+				<button name="done" class="done">Done!</button>
+				<textarea class="item-desc">This is a description of item #1.</textarea>
+			</div>
+			<div class="item completed">
+				<p class="item-name">Completed Item #2 with a very long name</p>
+				<button name="done" class="done" style="display: none">Done!</button>
+				<textarea class="item-desc">This is a description of item #2.</textarea>
+			</div>
+			<div class="item expanded">
+				<p class="item-name">Expanded Item #3</p>
+				<button name="done" class="done">Done!</button>
+				<textarea class="item-desc visible" name="desc">This is a description of item #3.</textarea>
+			</div>
+			<div class="item completed expanded">
+				<p class="item-name">Completed and expanded Item #4</p>
+				<button name="done" class="done" style="display: none">Done!</button>
+				<textarea class="item-desc visible">This is a description of item #4.</textarea>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
