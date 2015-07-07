@@ -1,5 +1,7 @@
 $(document).ready(function() {
-	// $("body").droppable();
+	$(".dragarea").droppable({
+		accept: ".item"
+	});
 
 	// Adding new item
 	$(this).keydown(function(event) {
@@ -8,10 +10,16 @@ $(document).ready(function() {
 			// Create new item with value
 			$(".items").append("<div class='item' style='display: none'><p class='item-name'>" + newItem + "</p><button name='done' class='done'>Done!</button><textarea class='item-desc' placeholder='Enter details here.'></textarea></div>");
 			$(".item").show('fast');
-			$(".items").sortable({
-				containment: '.main',
-				items: '.item',
-				axis: 'y'
+			$(".dragarea").sortable({
+				items: ".item"
+			});
+			$('.item').draggable({
+				connectToSortable: ".dragarea",
+				revert: function(valid) {
+					if (!valid) {
+						this.remove();
+					}
+				}
 			});
 			$(".item").disableSelection();
 			$('input').val('');
@@ -41,6 +49,9 @@ $(document).ready(function() {
 			$(this).remove();
 		});
 	});
+
+	// Remove item
+
 
 	// Prevent clicks on description from collapsing item
 	$(".items").on('click', '.item-desc', function(e) {
