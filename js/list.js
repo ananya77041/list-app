@@ -11,13 +11,16 @@ $(document).ready(function() {
 			$(".items").append("<div class='item' style='display: none'><p class='item-name'>" + newItem + "</p><button name='done' class='done'>Done!</button><textarea class='item-desc' placeholder='Enter details here.'></textarea></div>");
 			$(".item").show('fast');
 			$(".dragarea").sortable({
-				items: ".item"
+				items: ".item",
+				tolerance: "pointer"
 			});
 			$('.item').draggable({
 				connectToSortable: ".dragarea",
 				revert: function(valid) {
 					if (!valid) {
-						this.remove();
+						this.fadeOut(400, function() {
+							this.remove();
+						})
 					}
 				}
 			});
